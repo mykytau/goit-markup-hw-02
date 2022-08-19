@@ -3,7 +3,7 @@
     --logo-color: #000000;
     --accent-color:#2196f3;
     --main-text-color: #757575;
-    --address-color: rgba(255, 255, 255, 0,6);
+    --address-color: rgba(255, 255, 255, 0.6);
     --h-color-text: #212121;
     --header-bcolor: #FFFFFF;
     --hero-bcolor: #2f303a;
@@ -15,8 +15,21 @@ body{
     background-color: var(--header-bcolor);
     font-family: Roboto, sans-serif;
     color: var(--h-color-text);
+    letter-spacing: 0.03em;
 }
-
+.visually-hidden {
+    position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  
 /* Header markup */
 .logo {
     font-family: Raleway, sans-serif;
@@ -77,34 +90,32 @@ body{
     color: #757575;
 }
 .nav-mail {
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
+ .nav-mail:focus,.nav-mail:hover {
+   color:var(--accent-color);
+}
+.nav-phone:focus, .nav-phone:hover{
+    color:var(--accent-color);
+ }
 .contacts-nav-link a{
 text-decoration: none;
 }
 .contacts-nav .nav-mail:hover {
     color: var(--accent-color)
 }
-
-.programists-pictures ul {
-    list-style-type: none;
-}
-
 /*Hero-color*/
 .hero-color, .text {
     background-color: var(--hero-bcolor);
-    color: var(--header-bcolor);
 }
 .text {
+    color: var(--header-bcolor);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
     text-align: center;
-}
- .click-button {
-    color: var(--header-bcolor);
-    font-family: inherit;
+    letter-spacing: 0.06em;
 }
 
 .button-order {
@@ -113,12 +124,12 @@ text-decoration: none;
     border: none;
     border-radius: 4px;
     font-family: inherit;
-
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 6%; 
 }
 /* Our Benefits*/
-.well-being{
-    background-color: var(--whatwedo-bcolor);
-}
+
 .well-being ul{
     list-style-type: none;
 }
@@ -138,10 +149,16 @@ text-decoration: none;
     list-style-type: none;
 }
 
-.address-bottom
+
+.what-we-do {
+    background-color:var(--whatwedo-bcolor)
+}
+
+
 /* Our Team */
 .programists-pictures ul {
-list-style-type:none;
+    background-color: var(--team-bcolor);
+    list-style-type:none;
 }
 .members-team {
     background-color: var(--team-bcolor);
@@ -169,11 +186,7 @@ list-style-type:none;
     background-color: var(--hero-bcolor);
 }
 .logotype {
-    font-family: Raleway, sans-serif;
     color: var(--accent-color);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.17;
 }
 .logowhite {
     font-family: Raleway, sans-serif;
@@ -184,15 +197,14 @@ list-style-type:none;
     text-decoration: none;
 }
 .map {
-    font-family: Raleway, sans-serif;
+    font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     line-height: 1.7;
     text-decoration: none;
+    letter-spacing: 3%;
 }
-.map .address-bottom{
-    color: var(--address-color);
-}
+
 .bottom-space a{
     text-decoration: none;
 }
@@ -200,7 +212,9 @@ list-style-type:none;
 .address-link {
     color:var(--header-bcolor)
 }
-
+.address-bottom {
+    color: var(--address-color);
+}
 .bottom-space ul{
     list-style-type: none;
 }
@@ -220,6 +234,7 @@ list-style-type:none;
     line-height:0.5em;;
 }
 
+
 .button-wrapper  {
     list-style-type: none;
 }
@@ -233,30 +248,36 @@ list-style-type:none;
     font-weight: 500;
     font-size: 16px;
     font-family: inherit;
+    letter-spacing: 0.03em;
 }
 .button-wrapper, .main-button:focus,
-.button-gray:focus,
-.main-button:hover,
-.button-gray:hover{
-    color:var(--accent-color);
-
+.main-button{
+    color:var(--header-bcolor);
 }
-.photo-portfolio-list {
-    list-style-type: none;
+.button-gray:hover{
+    background-color:var(--accent-color);
+}
+.main-content {
+    background-color: var(--whatwedo-bcolor)
+}
+.main-content .photo-portfolio-list p {
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 1.8;
+}
+.photo-portfolio-list li{
+    list-style: none;
+}
+.photo-portfolio-list ul{
+    text-decoration: none;
 }
 .photo-portfolio-header{
     color: var(--h-color-text);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
+    letter-spacing: 6%;
 }
-
-.photo-portfolio-list a {
+.none-style{
     text-decoration: none;
-}
-
-.photo-portfolio-paragraph {
-    color: var(--main-text-color);
-    font-size: 16px;
-    line-height: 1.8;
 }
