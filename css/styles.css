@@ -16,6 +16,7 @@ body{
     font-family: Roboto, sans-serif;
     color: var(--h-color-text);
     letter-spacing: 0.03em;
+    font-size: 14px;
 }
 .visually-hidden {
     position: absolute;
@@ -64,8 +65,11 @@ body{
     color:var(--h-color-text);
 
 }
-.link-studio {
-    color:var(--accent-color)
+.link-studio-active {
+    color:var(--accent-color);
+}
+.link-port-active{
+    color:var(--accent-color);
 }
 
 .site-nav-link, .link-studio:focus,
@@ -74,9 +78,12 @@ body{
 .link-studio:hover,
 .link-item:hover,
 .link-port:hover {
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
-
+.link-studio-active:hover,
+.link-port-active:hover{
+    color:var(--accent-color);
+}
 .contacts-nav-link {
     list-style-type: none;
 }
@@ -90,7 +97,7 @@ body{
     color: #757575;
 }
 .nav-mail {
-    color: var(--accent-color);
+    color: var(--main-text-color);
 }
  .nav-mail:focus,.nav-mail:hover {
    color:var(--accent-color);
@@ -126,7 +133,8 @@ text-decoration: none;
     font-family: inherit;
     font-weight: 700;
     line-height: 1.8;
-    letter-spacing: 6%; 
+    letter-spacing: 0.06em; 
+    font-size: 16px;
 }
 /* Our Benefits*/
 
@@ -149,16 +157,25 @@ text-decoration: none;
     list-style-type: none;
 }
 
-
-.what-we-do {
-    background-color:var(--whatwedo-bcolor)
+.what-wedo-list {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
 }
-
 
 /* Our Team */
 .programists-pictures ul {
-    background-color: var(--team-bcolor);
     list-style-type:none;
+}
+.programists-pictures {
+    background-color: var(--team-bcolor);
+}
+.team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
 }
 .members-team {
     background-color: var(--team-bcolor);
@@ -232,6 +249,7 @@ text-decoration: none;
     font-family: inherit;
     letter-spacing: 0.03em;
     line-height:0.5em;;
+    cursor: pointer;
 }
 
 
@@ -249,6 +267,7 @@ text-decoration: none;
     font-size: 16px;
     font-family: inherit;
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
 .button-wrapper, .main-button:focus,
 .main-button{
@@ -256,9 +275,7 @@ text-decoration: none;
 }
 .button-gray:hover{
     background-color:var(--accent-color);
-}
-.main-content {
-    background-color: var(--whatwedo-bcolor)
+    color:#FFFFFF;
 }
 .main-content .photo-portfolio-list p {
     color: var(--main-text-color);
@@ -276,8 +293,15 @@ text-decoration: none;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 6%;
+    letter-spacing: 0.06em;
 }
 .none-style{
     text-decoration: none;
+}
+/* Footer add work */
+.address-link:hover,
+.address-link:focus,
+.address-bottom:focus,
+.address-bottom:hover {
+    color:#2196f3;
 }
