@@ -71,7 +71,9 @@ body{
 .link-port-active{
     color:var(--accent-color);
 }
-
+.link-studio{
+    color: #212121;
+}
 .site-nav-link, .link-studio:focus,
 .link-item:focus,
 .link-port:focus,
@@ -92,6 +94,7 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.17;
+    letter-spacing: 0.02em;
 }
 .nav-phone {
     color: #757575;
@@ -158,10 +161,14 @@ text-decoration: none;
 }
 
 .what-wedo-list {
+    color:#212121;
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
 /* Our Team */
@@ -172,10 +179,14 @@ text-decoration: none;
     background-color: var(--team-bcolor);
 }
 .team-title {
+    color:#212121;
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 .members-team {
     background-color: var(--team-bcolor);
