@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
 :root {
     --logo-color: #000000;
     --accent-color:#2196f3;
@@ -9,14 +9,57 @@
     --hero-bcolor: #2f303a;
     --whatwedo-bcolor: #f5f5f5;
     --team-bcolor: #f5f4fa;
-}
-
+    }
+    html {
+        box-sizing:border-box;
+    }
+    *, 
+    *::before, 
+    *::after {
+      box-sizing: inherit;
+    }
+    .wrapper{
+        padding:15px;
+        display: flex;
+        justify-content: center;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .container{
+        width: 1200px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    ,p{
+        margin: 0;
+    }
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .section{
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 body{
     background-color: var(--header-bcolor);
     font-family: Roboto, sans-serif;
     color: var(--h-color-text);
     letter-spacing: 0.03em;
     font-size: 14px;
+}
+.header{
+    display: flex;
 }
 .visually-hidden {
     position: absolute;
@@ -39,6 +82,11 @@ body{
     line-height: 1.19;
     text-decoration: none;
 }
+.header-flex{
+    display: flex;
+    align-items: center;
+}
+
 .logotype {
     color:var(--accent-color);
     font-weight: 700;;
@@ -87,14 +135,19 @@ body{
     color:var(--accent-color);
 }
 .contacts-nav-link {
+    margin-top: 0;
+    margin-bottom: 0;
     list-style-type: none;
 }
+/* NAV MAIL */
 
 .nav-mail, .nav-phone {
+    display: inline-block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    padding: 32px 50px;
 }
 .nav-phone {
     color: #757575;
@@ -117,6 +170,16 @@ text-decoration: none;
 /*Hero-color*/
 .hero-color, .text {
     background-color: var(--hero-bcolor);
+    text-align: center;
+}
+.hero-color{
+    padding-bottom: 94px;
+    padding: 200px;
+    margin-bottom: 94px;
+}
+.text {
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 .text {
     color: var(--header-bcolor);
@@ -124,25 +187,53 @@ text-decoration: none;
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: 0.06em;
+    margin-bottom: 44px;
+    width: 696px;
+    height: 120px;
+    top: 280px;
+    left: 452px;
+    right: 452px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .button-order {
+    display: inline-block;
+    padding: 10px 32px;
     background-color: var(--accent-color);
     color: var(--header-bcolor);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 4px;
     font-family: inherit;
     font-weight: 700;
     line-height: 1.8;
     letter-spacing: 0.06em; 
     font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 216px;
+    
 }
 /* Our Benefits*/
+.benefits {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
 
+
+
+.benefits-text{
+    margin: 0; 
+    padding-bottom: 94px;
+    padding-right: 30px;
+}
 .well-being ul{
     list-style-type: none;
+}
+.what-we-do{
+    padding-bottom:  94px;
 }
 .benefits {
     color: var(--h-color-text);
@@ -157,9 +248,23 @@ text-decoration: none;
     line-height: 1.71;
 }
 .what-we-do {
+    margin: 0;
+    padding-bottom: 94px;
     list-style-type: none;
 }
-
+.wedo-list{
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+.work-pictures{
+    padding-top: 0;
+}
+.what-we-do{
+    display: flex;
+    gap: 30px;
+}
 .what-wedo-list {
     color:#212121;
     font-family: 'Roboto';
@@ -178,6 +283,19 @@ text-decoration: none;
 .programists-pictures {
     background-color: var(--team-bcolor);
 }
+.team-title{
+    margin: 0;
+    margin-bottom: 50px;
+}
+.company-plus{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.company-plus{
+    display: flex;
+    gap: 30px;
+}
+
 .team-title {
     color:#212121;
     font-family: 'Roboto';
@@ -187,6 +305,28 @@ text-decoration: none;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
+}
+.our-team{
+    display: flex;
+    gap: 30px;
+}
+.our-team {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 94px;
+    
+}
+.team-title{
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.team-name{
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.job-title{
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 .members-team {
     background-color: var(--team-bcolor);
@@ -213,6 +353,68 @@ text-decoration: none;
 .bottom-space {
     background-color: var(--hero-bcolor);
 }
+.bottom-space {
+    padding:60px 0;
+}
+
+.logowhite {
+   margin-bottom: 20px;
+}
+.map .address-link .address-bottom{
+    padding-bottom: 9px;
+}
+.address-bottom-type{
+    padding-bottom:9px;
+}
+.address-bottom:last-child{
+    margin-bottom: 0;
+}
+.bottom-space .logowhite .logotype{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+/* LOGOTYPE FLEX */
+.logo{
+    display:flex;
+}
+.logo{
+    display: inline-block;
+
+}
+.logo {
+    margin-top: 24px;
+    margin-bottom: 25px;
+}
+/* NAV FLEX  */
+.site-nav-link{
+    display:flex;
+    display: block;
+}
+.site-nav-link  {
+   flex-direction: row;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.site-nav-link {
+    margin-left: 93px;
+}
+.site-nav-link{
+    display: flex;
+}
+.header-li{
+    margin-right: 50px;
+}
+.header-:nth-last-child(-n + 1) {
+    margin-right: 0;
+}
+/* FLEX CONTACTS NAV */
+.contacts-nav-link{
+    display: flex;
+    margin-left: auto;
+}
+.contacts-nav-link .nav-mail + .nav-phone{
+    margin-left: 50px;
+}
 .logotype {
     color: var(--accent-color);
 }
@@ -230,7 +432,7 @@ text-decoration: none;
     font-style: normal;
     line-height: 1.7;
     text-decoration: none;
-    letter-spacing: 3%;
+    letter-spacing: 0.03em;
 }
 
 .bottom-space a{
@@ -245,6 +447,7 @@ text-decoration: none;
 }
 .bottom-space ul{
     list-style-type: none;
+    padding:0;
 }
 /* Second maket */
 
@@ -253,17 +456,69 @@ text-decoration: none;
     color: var(--header-bcolor);
     font-size: 16px;
     line-height: 1.6;
-    padding: 6px 22px;
+    padding: 6px 25px;
     border-radius: 4px;
-    border:none;
     font-weight: 500;
     font-family: inherit;
     letter-spacing: 0.03em;
     line-height:0.5em;;
     cursor: pointer;
+    border: 1px solid transparent;
+    min-width: 73px;
+}
+.main-content {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+}
+.button-wrapper .photo-portfolio-list {
+    padding: 0;
+    margin: 0;
+}
+.main-content{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-left: 215px;
+    margin-right: 215px;
+}
+.text-redactor{
+    padding: 20px 24px;
+
+    border-left: 1px solid var(--whatwedo-bcolor);
+    border-right: 1px solid var(--whatwedo-bcolor);
+    border-bottom: 1px solid var(--whatwedo-bcolor);
+}
+.photo-portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
+.photo-flex{
+    flex-basis: calc((100% - 60px) / 3);
+    width: 370px;
+}
 
+.imgflex{
+    display: block;
+    max-width: 100%;
+}
+
+.button-wrapper  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+.button-wrapper .button-gray {
+    margin-right: 8px;
+}
+.button-wrapper .button-gray:nth-last-child(-n+1){
+    margin-right: 0;
+}
+.button-wrapper .button-gray + .main-button {
+    margin-bottom: 50px;
+}
 .button-wrapper  {
     list-style-type: none;
 }
@@ -273,12 +528,13 @@ text-decoration: none;
     color: var(--h-color-text);
     padding: 6px 22px;
     border-radius: 4px;
-    border:none;
     font-weight: 500;
     font-size: 16px;
     font-family: inherit;
     letter-spacing: 0.03em;
     cursor: pointer;
+    line-height: 1.8em;
+    border: 1px solid transparent;
 }
 .button-wrapper, .main-button:focus,
 .main-button{
@@ -306,6 +562,15 @@ text-decoration: none;
     line-height: 2;
     letter-spacing: 0.06em;
 }
+.photo-portfolio-header{
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+.photo-potfolio-paragraph{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .none-style{
     text-decoration: none;
 }
