@@ -18,15 +18,9 @@
     *::after {
       box-sizing: inherit;
     }
-    .wrapper{
-        padding:15px;
-        display: flex;
-        justify-content: center;
-    }
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
+   .contacts-nav-link a{
+    margin-right: 50px;
+   }
     .container{
         width: 1200px;
         padding-left: 15px;
@@ -47,6 +41,9 @@
         width: 100%;
         height: auto;
     }
+    .bottom-space{
+        font-style: normal;
+    }
     .section{
         padding-top: 94px;
         padding-bottom: 94px;
@@ -60,7 +57,13 @@ body{
 }
 .header{
     display: flex;
+    align-items: center
 }
+.header-nav{
+    display: inline-block;
+    display: flex; 
+}
+
 .visually-hidden {
     position: absolute;
   width: 1px;
@@ -82,10 +85,7 @@ body{
     line-height: 1.19;
     text-decoration: none;
 }
-.header-flex{
-    display: flex;
-    align-items: center;
-}
+
 
 .logotype {
     color:var(--accent-color);
@@ -96,7 +96,7 @@ body{
 .second-logotype-style {
     color:#000000;
 }
-.site-nav-link {
+.site-nav-link a{
     list-style-type: none;
     font-weight: 500;
     font-size: 14px;
@@ -131,13 +131,14 @@ body{
     color: var(--accent-color);
 }
 .link-studio-active:hover,
-.link-port-active:hover{
+.link-port-active:hover {
     color:var(--accent-color);
 }
 .contacts-nav-link {
     margin-top: 0;
     margin-bottom: 0;
     list-style-type: none;
+    padding: 0;
 }
 /* NAV MAIL */
 
@@ -147,7 +148,7 @@ body{
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    padding: 32px 50px;
+    padding: 32px 0;
 }
 .nav-phone {
     color: #757575;
@@ -173,9 +174,7 @@ text-decoration: none;
     text-align: center;
 }
 .hero-color{
-    padding-bottom: 94px;
-    padding: 200px;
-    margin-bottom: 94px;
+    padding: 200px 0;
 }
 .text {
     margin-top: 0;
@@ -190,10 +189,6 @@ text-decoration: none;
     letter-spacing: 0.06em;
     margin-bottom: 44px;
     width: 696px;
-    height: 120px;
-    top: 280px;
-    left: 452px;
-    right: 452px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -203,11 +198,11 @@ text-decoration: none;
     padding: 10px 32px;
     background-color: var(--accent-color);
     color: var(--header-bcolor);
-    border: 1px solid transparent;
+    border: none;
     border-radius: 4px;
     font-family: inherit;
     font-weight: 700;
-    line-height: 1.8;
+    line-height: 1.88;
     letter-spacing: 0.06em; 
     font-size: 16px;
     cursor: pointer;
@@ -221,19 +216,29 @@ text-decoration: none;
     margin-bottom: 10px;
     padding: 0;
 }
-
+.header-nav ul{
+    list-style-type: none;
+}
 
 
 .benefits-text{
     margin: 0; 
-    padding-bottom: 94px;
-    padding-right: 30px;
 }
 .well-being ul{
     list-style-type: none;
 }
+.company-plus{
+    padding-left: 0;
+}
+.well-being{
+    padding: 94px 0;
+}
 .what-we-do{
-    padding-bottom:  94px;
+    padding-left: 0;
+}
+.programists-pictures{
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .benefits {
     color: var(--h-color-text);
@@ -259,7 +264,8 @@ text-decoration: none;
     text-align: center;
 }
 .work-pictures{
-    padding-top: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .what-we-do{
     display: flex;
@@ -285,7 +291,7 @@ text-decoration: none;
 }
 .team-title{
     margin: 0;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 .company-plus{
     margin-top: 0;
@@ -309,17 +315,13 @@ text-decoration: none;
 .our-team{
     display: flex;
     gap: 30px;
+    padding-left: 0;
 }
 .our-team {
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 94px;
-    
 }
-.team-title{
-    margin-top: 0;
-    margin-bottom: 50px;
-}
+
 .team-name{
     margin-bottom: 0;
     margin-top: 30px;
@@ -390,21 +392,25 @@ text-decoration: none;
     display:flex;
     display: block;
 }
+
 .site-nav-link  {
    flex-direction: row;
-    margin-top: 32px;
-    margin-bottom: 32px;
 }
 .site-nav-link {
     margin-left: 93px;
 }
 .site-nav-link{
     display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header-nav{
+    margin-left: 93px;
 }
 .header-li{
     margin-right: 50px;
 }
-.header-:nth-last-child(-n + 1) {
+.header-li:nth-last-child(-n + 1) {
     margin-right: 0;
 }
 /* FLEX CONTACTS NAV */
@@ -463,12 +469,10 @@ text-decoration: none;
     letter-spacing: 0.03em;
     line-height:0.5em;;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: none;
     min-width: 73px;
 }
 .main-content {
-    margin-top: 0;
-    margin-bottom: 0;
     display: block;
 }
 .button-wrapper .photo-portfolio-list {
@@ -484,14 +488,13 @@ text-decoration: none;
 .text-redactor{
     padding: 20px 24px;
 
-    border-left: 1px solid var(--whatwedo-bcolor);
-    border-right: 1px solid var(--whatwedo-bcolor);
-    border-bottom: 1px solid var(--whatwedo-bcolor);
 }
 .photo-portfolio-list{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin: 0;
+    padding-left: 0;
 }
 
 .photo-flex{
@@ -507,8 +510,9 @@ text-decoration: none;
 .button-wrapper  {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 0;
+    padding-bottom: 50px;
+    margin: 0 0;
+    padding-left: 0;
 }
 .button-wrapper .button-gray {
     margin-right: 8px;
@@ -534,7 +538,7 @@ text-decoration: none;
     letter-spacing: 0.03em;
     cursor: pointer;
     line-height: 1.8em;
-    border: 1px solid transparent;
+    border: none;
 }
 .button-wrapper, .main-button:focus,
 .main-button{
