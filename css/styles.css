@@ -18,7 +18,7 @@
     *::after {
       box-sizing: inherit;
     }
-   .contacts-nav-link a{
+   .contacts-nav-link .contacts-address{
     margin-right: 50px;
    }
     .container{
@@ -33,7 +33,7 @@
     h3,
     h4,
     h5,
-    ,p{
+    p{
         margin: 0;
     }
     img{
@@ -254,17 +254,18 @@ text-decoration: none;
 }
 .what-we-do {
     margin: 0;
-    padding-bottom: 94px;
     list-style-type: none;
 }
 .wedo-list{
-    padding-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
     margin-top: 0;
-    margin-bottom: 0;
     text-align: center;
 }
 .work-pictures{
-    padding-top: 94px;
     padding-bottom: 94px;
 }
 .what-we-do{
@@ -291,7 +292,7 @@ text-decoration: none;
 }
 .team-title{
     margin: 0;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 .company-plus{
     margin-top: 0;
@@ -321,10 +322,19 @@ text-decoration: none;
     margin-top: 0;
     margin-bottom: 0;
 }
+.team-text{
+    background: #FFFFFF;
+/* material shadow v1 */
 
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
+.team-text-padding{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .team-name{
     margin-bottom: 0;
-    margin-top: 30px;
 }
 .job-title{
     margin-top: 10px;
@@ -354,26 +364,22 @@ text-decoration: none;
 }
 .bottom-space {
     background-color: var(--hero-bcolor);
-}
-.bottom-space {
     padding:60px 0;
 }
 
-.logowhite {
-   margin-bottom: 20px;
-}
+
+
 .map .address-link .address-bottom{
-    padding-bottom: 9px;
+    margin-bottom: 9px;
 }
 .address-bottom-type{
-    padding-bottom:9px;
+    margin-bottom:9px;
 }
 .address-bottom:last-child{
     margin-bottom: 0;
 }
 .bottom-space .logowhite .logotype{
     display: inline-block;
-    margin-bottom: 20px;
 }
 /* LOGOTYPE FLEX */
 .logo{
@@ -424,15 +430,23 @@ text-decoration: none;
 .logotype {
     color: var(--accent-color);
 }
-.logowhite {
+ .logowhite {
     font-family: Raleway, sans-serif;
     color: var(--header-bcolor);
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.7;
+    line-height: 1.2;
     text-decoration: none;
+    letter-spacing: 0.03em;
+  
+}
+.logowhite .logotype{ 
+    margin-bottom: 20px;
 }
 .map {
+    margin-bottom: 20px;
+}
+.address-link{
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -440,7 +454,6 @@ text-decoration: none;
     text-decoration: none;
     letter-spacing: 0.03em;
 }
-
 .bottom-space a{
     text-decoration: none;
 }
@@ -452,8 +465,13 @@ text-decoration: none;
     color: var(--address-color);
 }
 .bottom-space ul{
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    padding:0;
+   
+}
+.address-bottom-type:nth-last-child(-n + 1){
+    margin-bottom: 0;
 }
 /* Second maket */
 
@@ -461,16 +479,18 @@ text-decoration: none;
     background-color: var(--accent-color);
     color: var(--header-bcolor);
     font-size: 16px;
-    line-height: 1.6;
-    padding: 6px 25px;
+    line-height: 1.62;
+    padding: 6px 22px;
     border-radius: 4px;
     font-weight: 500;
     font-family: inherit;
     letter-spacing: 0.03em;
-    line-height:0.5em;;
     cursor: pointer;
     border: none;
-    min-width: 73px;
+    text-align: center;
+/* shadow-middle */
+
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .main-content {
     display: block;
@@ -482,11 +502,11 @@ text-decoration: none;
 .main-content{
     padding-top: 94px;
     padding-bottom: 94px;
-    margin-left: 215px;
-    margin-right: 215px;
 }
 .text-redactor{
     padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 
 }
 .photo-portfolio-list{
@@ -510,9 +530,9 @@ text-decoration: none;
 .button-wrapper  {
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
-    margin: 0 0;
+    margin-bottom: 50px;
     padding-left: 0;
+    margin-top: 0;
 }
 .button-wrapper .button-gray {
     margin-right: 8px;
@@ -520,10 +540,10 @@ text-decoration: none;
 .button-wrapper .button-gray:nth-last-child(-n+1){
     margin-right: 0;
 }
-.button-wrapper .button-gray + .main-button {
-    margin-bottom: 50px;
-}
+
 .button-wrapper  {
+    display: flex;
+    gap: 8px;
     list-style-type: none;
 }
 
